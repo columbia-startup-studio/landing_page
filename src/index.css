@@ -10,6 +10,9 @@
     --blue-gradient-end: #b6d2ff;
     --button-bg: #000000;
     --button-text: #ffffff;
+    --hero-title-size: clamp(3.2rem, 9vw, 5.5rem);
+    --section-title-size: clamp(2rem, 3vw, 2.5rem);
+    --cta-title-size: clamp(2.2rem, 3.8vw, 3rem);
 
     --container-max-width: 1200px;
     --container-padding: 2rem;

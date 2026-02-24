@@ -1,4 +1,5 @@
 import React from 'react'
+import { GraduationCap } from 'lucide-react'
 import './SocialProof.css'
 
 const SocialProof = () => {
@@ -14,6 +15,10 @@ const SocialProof = () => {
             <div className="container">
                 <div className="social-header">
                     <div className="social-text">
+                        <div className="social-badge">
+                            <GraduationCap size={12} />
+                            Built for Columbia students
+                        </div>
                         <h2 className="social-title">Who's on Circle?</h2>
                         <p className="social-subtitle">
                             Join your classmates from Columbia, Barnard, SEAS, and more. Real students, verified by university email.
