@@ -28,6 +28,7 @@ const BottomCTA = () => {
                             <input
                                 id="bottom-cta-email"
                                 type="email"
+                                name="email"
                                 placeholder="uni@columbia.edu"
                                 className="cta-input"
                                 required
