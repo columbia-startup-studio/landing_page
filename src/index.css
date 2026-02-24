@@ -15,6 +15,12 @@
     --container-padding: 2rem;
 }
 
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1.25rem;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

@@ -52,7 +52,17 @@
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
     .navbar-links {
         display: none;
+    }
+
+    .navbar-cta .btn-primary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 }
