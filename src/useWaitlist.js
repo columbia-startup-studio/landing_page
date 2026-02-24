@@ -16,7 +16,8 @@ export default function useWaitlist() {
             await fetch(ENDPOINT, {
                 method: 'POST',
                 mode: 'no-cors',
-                body: JSON.stringify({ email }),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `email=${encodeURIComponent(email)}`,
             })
             setStatus('success')
         } catch {
