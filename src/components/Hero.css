@@ -1,0 +1,196 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    min-height: calc(100vh - 80px);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 580px;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #eef2ff;
+    color: #3b82f6;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 420px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-input:focus {
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.2);
+}
+
+.form-submit {
+    padding: 1rem 1.75rem;
+    font-size: 1rem;
+}
+
+.hero-subtext {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-left: 1rem;
+}
+
+/* --- Placeholder Visuals for phones --- */
+.hero-visual {
+    flex: 1;
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup {
+    width: 280px;
+    height: 580px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 8px solid #1f2937;
+    position: absolute;
+    overflow: hidden;
+}
+
+.phone-mockup-1 {
+    transform: rotate(-5deg) translateX(-60px);
+    z-index: 1;
+}
+
+.phone-mockup-2 {
+    transform: rotate(5deg) translateX(80px) translateY(40px);
+    z-index: 2;
+    box-shadow: -15px 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.phone-screen {
+    padding: 1.5rem;
+    height: 100%;
+    background-color: #f9fafb;
+}
+
+.phone-header {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.phone-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.circle-graphic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px dashed #d1d5db;
+    margin: 2rem auto;
+}
+
+.btn-join-circle {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    font-weight: 600;
+    color: #111827;
+    margin-top: auto;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtext {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-visual {
+        display: none;
+        /* Hide on small screens for initial iteration */
+    }
+}

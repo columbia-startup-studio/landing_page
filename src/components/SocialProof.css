@@ -1,0 +1,140 @@
+.social-proof-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f3f4f6;
+    /* slightly darker off-white for contrast */
+}
+
+.social-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.social-text {
+    max-width: 500px;
+}
+
+.social-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+.social-subtitle {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.social-avatars-group {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-overlap {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #d1d5db;
+    margin-left: -12px;
+}
+
+.avatar-overlap:first-child {
+    margin-left: 0;
+    background-color: #9ca3af;
+}
+
+.avatar-2 {
+    background-color: #6b7280;
+}
+
+.avatar-3 {
+    background-color: #4b5563;
+}
+
+.avatar-group-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.profile-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    /* space for scrollbar if needed */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.profile-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-card {
+    flex: 1;
+    min-width: 240px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    /* Highly rounded pill shape like design */
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.profile-img-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1f2937;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.95rem;
+}
+
+.profile-major {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+.verified-badge {
+    text-align: center;
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .social-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+}
