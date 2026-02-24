@@ -11,8 +11,7 @@ const SocialProof = () => {
     ];
 
     return (
-        <section id="community" className="social-proof-section">
-            <div className="container">
+        <section id="community" className="social-proof-section container">
                 <div className="section-header">
                     <div className="social-badge">
                         <GraduationCap size={12} />
@@ -39,7 +38,6 @@ const SocialProof = () => {
                 <div className="verified-badge">
                     Verified university email required for signup.
                 </div>
-            </div>
         </section>
     )
 }
