@@ -1,8 +1,11 @@
 import React from 'react'
 import { GraduationCap, CalendarDays, Sparkles, ShieldCheck } from 'lucide-react'
+import useWaitlist from '../useWaitlist'
 import './Hero.css'
 
 const Hero = () => {
+    const { status, submit } = useWaitlist()
+
     return (
         <section id="hero" className="hero-section">
             <div className="hero-bg-orb hero-orb-one" aria-hidden="true"></div>
@@ -39,25 +42,29 @@ const Hero = () => {
                     </li>
                 </ul>
 
-                <form className="hero-form" onSubmit={(event) => event.preventDefault()}>
-                    <label className="hero-form-label" htmlFor="hero-waitlist">
-                        Get notified for launch
-                    </label>
-                    <div className="input-group">
-                        <input
-                            id="hero-waitlist"
-                            type="email"
-                            name="email"
-                            placeholder="uni@columbia.edu"
-                            className="email-input"
-                            required
-                        />
-                        <button type="submit" className="btn-primary form-submit">
-                            Join Waitlist
-                        </button>
-                    </div>
-                    <p className="hero-subtext">Join 2,000+ students on the waitlist.</p>
-                </form>
+                {status === 'success' ? (
+                    <p className="hero-success">You&apos;re on the list! We&apos;ll be in touch.</p>
+                ) : (
+                    <form className="hero-form" onSubmit={(e) => { e.preventDefault(); submit(e.target.email.value) }}>
+                        <label className="hero-form-label" htmlFor="hero-waitlist">
+                            Get notified for launch
+                        </label>
+                        <div className="input-group">
+                            <input
+                                id="hero-waitlist"
+                                type="email"
+                                name="email"
+                                placeholder="uni@columbia.edu"
+                                className="email-input"
+                                required
+                            />
+                            <button type="submit" className="btn-primary form-submit" disabled={status === 'submitting'}>
+                                {status === 'submitting' ? 'Joining...' : 'Join Waitlist'}
+                            </button>
+                        </div>
+                        <p className="hero-subtext">Join 2,000+ students on the waitlist.</p>
+                    </form>
+                )}
             </div>
 
             <div className="hero-visual">

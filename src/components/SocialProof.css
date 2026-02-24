@@ -2,18 +2,6 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: #f3f4f6;
-    /* slightly darker off-white for contrast */
-}
-
-.social-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 3rem;
-}
-
-.social-text {
-    max-width: 500px;
 }
 
 .social-badge {
@@ -28,7 +16,6 @@
     border-radius: 9999px;
     border: 1px solid rgba(59, 130, 246, 0.24);
     background: linear-gradient(135deg, #eef2ff, #f5f3ff);
-    width: fit-content;
 }
 
 .social-badge svg {
@@ -38,78 +25,18 @@
     color: #1d4ed8;
 }
 
-.social-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    color: #111827;
-}
-
-.social-subtitle {
-    color: var(--text-secondary);
-    line-height: 1.5;
-    font-size: 1.05rem;
-}
-
-.social-avatars-group {
-    display: flex;
-    align-items: center;
-}
-
-.avatar-overlap {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid white;
-    background-color: #d1d5db;
-    margin-left: -12px;
-}
-
-.avatar-overlap:first-child {
-    margin-left: 0;
-    background-color: #9ca3af;
-}
-
-.avatar-2 {
-    background-color: #6b7280;
-}
-
-.avatar-3 {
-    background-color: #4b5563;
-}
-
-.avatar-group-count {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #374151;
-    font-size: 0.75rem;
-    font-weight: 600;
-    z-index: 10;
-}
-
 .profile-cards {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 3rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    /* space for scrollbar if needed */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.profile-cards::-webkit-scrollbar {
-    display: none;
+    justify-content: center;
 }
 
 .profile-card {
     flex: 1;
-    min-width: 240px;
+    max-width: 280px;
     background-color: #ffffff;
     border-radius: 100px;
-    /* Highly rounded pill shape like design */
     padding: 0.75rem;
     display: flex;
     align-items: center;
@@ -154,9 +81,13 @@
 }
 
 @media (max-width: 768px) {
-    .social-header {
+    .profile-cards {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 320px;
     }
 }

@@ -157,6 +157,12 @@
     margin-left: 0.85rem;
 }
 
+.hero-success {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #059669;
+}
+
 .hero-visual {
     flex: 1;
     position: relative;

@@ -160,6 +160,13 @@
     color: var(--text-tertiary);
 }
 
+.cta-success {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #059669;
+    margin-top: 1.5rem;
+}
+
 @media (max-width: 768px) {
     .cta-title {
         font-size: 2.75rem;

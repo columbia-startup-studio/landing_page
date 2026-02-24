@@ -13,24 +13,15 @@ const SocialProof = () => {
     return (
         <section id="community" className="social-proof-section">
             <div className="container">
-                <div className="social-header">
-                    <div className="social-text">
-                        <div className="social-badge">
-                            <GraduationCap size={12} />
-                            Built for Columbia students
-                        </div>
-                        <h2 className="social-title">Who's on Circle?</h2>
-                        <p className="social-subtitle">
-                            Join your classmates from Columbia, Barnard, SEAS, and more. Real students, verified by university email.
-                        </p>
+                <div className="section-header">
+                    <div className="social-badge">
+                        <GraduationCap size={12} />
+                        Built for Columbia students
                     </div>
-                    <div className="social-avatars-group">
-                        {/* Visual representation of the overlapping avatars from design */}
-                        <div className="avatar-overlap avatar-1"></div>
-                        <div className="avatar-overlap avatar-2"></div>
-                        <div className="avatar-overlap avatar-3"></div>
-                        <div className="avatar-overlap avatar-group-count">+2k</div>
-                    </div>
+                    <h2 className="section-title">Who&apos;s on Circle?</h2>
+                    <p className="section-subtitle">
+                        Join your classmates from Columbia, Barnard, SEAS, and more. Real students, verified by university email.
+                    </p>
                 </div>
 
                 <div className="profile-cards">
