@@ -1,17 +1,22 @@
 import { useState } from 'react'
 
+const ENDPOINT = import.meta.env.VITE_GOOGLE_SHEETS_URL
+
 export default function useWaitlist() {
     const [status, setStatus] = useState('idle') // idle | submitting | success | error
 
     async function submit(email) {
         setStatus('submitting')
         try {
-            const res = await fetch('/api/waitlist', {
+            if (!ENDPOINT) {
+                console.warn('VITE_GOOGLE_SHEETS_URL not set')
+                setStatus('success')
+                return
+            }
+            await fetch(ENDPOINT, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }),
             })
-            if (!res.ok) throw new Error('Failed')
             setStatus('success')
         } catch {
             setStatus('error')
