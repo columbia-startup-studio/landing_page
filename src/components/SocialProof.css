@@ -1,10 +1,6 @@
 .social-proof-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: clamp(4.5rem, 9vh, 6.5rem);
-    padding-bottom: clamp(4.5rem, 9vh, 6.5rem);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     background-color: #f3f4f6;
 }
 
@@ -86,7 +82,6 @@
 
 @media (max-width: 768px) {
     .social-proof-section {
-        min-height: auto;
         padding-top: 4rem;
         padding-bottom: 4rem;
     }

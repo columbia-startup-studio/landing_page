@@ -1,7 +1,6 @@
 .bottom-cta-section {
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +8,7 @@
         radial-gradient(circle at 14% 18%, #dbeafe 0%, rgba(219, 234, 254, 0) 38%),
         radial-gradient(circle at 85% 72%, #ede9fe 0%, rgba(237, 233, 254, 0) 38%),
         linear-gradient(140deg, #eff6ff 0%, #f5f3ff 40%, #ecfeff 100%);
-    padding: 5.5rem 0;
+    padding: 6rem 0;
     text-align: center;
 }
 
@@ -72,7 +71,7 @@
 }
 
 .cta-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 900;
     color: #111827;
     margin-bottom: 0.85rem;
@@ -179,8 +178,7 @@
     }
 
     .bottom-cta-section {
-        min-height: 88vh;
-        padding-top: 5rem;
+        padding-top: 4rem;
         padding-bottom: 4rem;
     }
 

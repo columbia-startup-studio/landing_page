@@ -1,10 +1,6 @@
 .features-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: clamp(4.5rem, 9vh, 6.5rem);
-    padding-bottom: clamp(4.5rem, 9vh, 6.5rem);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .section-header {
@@ -88,7 +84,6 @@
     .features-section {
         padding-top: 4rem;
         padding-bottom: 4rem;
-        min-height: auto;
     }
 
     .feature-card {
