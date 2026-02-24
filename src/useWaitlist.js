@@ -15,6 +15,7 @@ export default function useWaitlist() {
             }
             await fetch(ENDPOINT, {
                 method: 'POST',
+                mode: 'no-cors',
                 body: JSON.stringify({ email }),
             })
             setStatus('success')
