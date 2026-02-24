@@ -1,6 +1,7 @@
 .bottom-cta-section {
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +60,7 @@
 }
 
 .cta-kicker {
-    margin: 0 0 0.8rem;
+    margin: 0 0 1.5rem;
     padding: 0.38rem 0.85rem;
     color: #1d4ed8;
     font-size: 0.78rem;
@@ -74,7 +75,7 @@
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 900;
     color: #111827;
-    margin-bottom: 0.85rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.035em;
     line-height: 1.02;
     text-wrap: balance;
@@ -85,11 +86,11 @@
     font-size: 1.22rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
 }
 
 .cta-form {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     width: 100%;
     max-width: 640px;
     position: relative;
