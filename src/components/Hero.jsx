@@ -4,7 +4,7 @@ import './Hero.css'
 
 const Hero = () => {
     return (
-        <section id="hero" className="container hero-section">
+        <section id="hero" className="hero-section">
             <div className="hero-bg-orb hero-orb-one" aria-hidden="true"></div>
             <div className="hero-bg-orb hero-orb-two" aria-hidden="true"></div>
 

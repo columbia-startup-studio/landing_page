@@ -5,8 +5,11 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    width: 100%;
     padding-top: 4.25rem;
     padding-bottom: 5rem;
+    padding-left: max(var(--container-padding), calc((100% - var(--container-max-width)) / 2 + var(--container-padding)));
+    padding-right: max(var(--container-padding), calc((100% - var(--container-max-width)) / 2 + var(--container-padding)));
     isolation: isolate;
 }
 
