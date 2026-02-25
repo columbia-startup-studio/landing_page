@@ -1,87 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
-:root {
-    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    --bg-color: #fcfdfe;
-    --text-primary: #1a1b1e;
-    --text-secondary: #6b7280;
-    --text-tertiary: #9ca3af;
-    --blue-gradient-start: #7ba8ff;
-    --blue-gradient-end: #b6d2ff;
-    --button-bg: #000000;
-    --button-text: #ffffff;
-    --hero-title-size: clamp(3.2rem, 9vw, 5.5rem);
-    --section-title-size: clamp(2rem, 3vw, 2.5rem);
-    --cta-title-size: clamp(2.2rem, 3.8vw, 3rem);
-
-    --container-max-width: 1200px;
-    --container-padding: 2rem;
+@theme {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-bg: #fcfdfe;
+    --color-text-primary: #1a1b1e;
+    --color-text-secondary: #6b7280;
+    --color-text-tertiary: #9ca3af;
+    --color-blue-gradient-start: #7ba8ff;
+    --color-blue-gradient-end: #b6d2ff;
 }
 
-@media (max-width: 768px) {
-    :root {
-        --container-padding: 1.25rem;
+@layer base {
+    body {
+        font-family: var(--font-sans);
+        background-color: var(--color-bg);
+        color: var(--color-text-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-family);
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-button {
-    cursor: pointer;
-    font-family: inherit;
-    border: none;
-    background: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-}
-
-.btn-primary {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.btn-primary:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
