@@ -85,8 +85,8 @@ const Hero = () => {
                 <div className="flex flex-1 relative min-h-[500px] lg:min-h-[560px] xl:min-h-[640px] justify-center items-center w-full mt-10 lg:mt-0 scale-[0.85] origin-top lg:scale-100">
                     {/* First Phone: Activity Feed */}
                     <div className={`w-[280px] h-[580px] bg-white rounded-[40px] shadow-[0_28px_56px_-20px_rgba(0,0,0,0.35)] border-[8px] border-gray-800 absolute overflow-hidden z-[1] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] origin-bottom lg:origin-center 
-                        ${activePhone === 0 ? 'opacity-100 scale-[1] lg:scale-100' : 'opacity-0 scale-[0.8] lg:scale-[0.8] pointer-events-none lg:pointer-events-auto'} 
-                        lg:opacity-100 lg:-rotate-[5deg] lg:-translate-x-[70px]`}>
+                        ${activePhone === 0 ? 'opacity-100 scale-[1]' : 'opacity-0 scale-[0.8] pointer-events-none'} 
+                        lg:pointer-events-auto lg:scale-100 lg:opacity-100 lg:-rotate-[5deg] lg:-translate-x-[70px]`}>
                         <div className="p-6 h-full bg-gray-50 flex flex-col">
                             <div className="font-bold text-[1.24rem] mb-8 text-center text-gray-900 border-b border-gray-200 pb-4">Activity</div>
 
@@ -136,8 +136,8 @@ const Hero = () => {
 
                     {/* Second Phone: Study Session */}
                     <div className={`w-[280px] h-[580px] bg-white rounded-[40px] shadow-[-18px_26px_56px_-18px_rgba(0,0,0,0.33)] border-[8px] border-gray-800 absolute overflow-hidden z-[2] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] origin-bottom lg:origin-center
-                        ${activePhone === 1 ? 'opacity-100 scale-[1]' : 'opacity-0 scale-[0.8] pointer-events-none lg:pointer-events-auto'}
-                        lg:opacity-100 lg:scale-100 lg:rotate-[5deg] lg:translate-x-[90px] lg:translate-y-[36px]`}>
+                        ${activePhone === 1 ? 'opacity-100 scale-[1]' : 'opacity-0 scale-[0.8] pointer-events-none'}
+                        lg:pointer-events-auto lg:scale-100 lg:opacity-100 lg:rotate-[5deg] lg:translate-x-[90px] lg:translate-y-[36px]`}>
                         <div className="pt-8 px-5 pb-6 h-full bg-[#f8f9fa] relative flex flex-col items-center">
                             {/* Top Bar */}
                             <div className="w-full flex items-center mb-6">
