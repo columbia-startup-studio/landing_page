@@ -1,10 +1,36 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { GraduationCap, CalendarDays, Sparkles, ShieldCheck, ArrowLeft, MapPin, Clock, UserPlus } from 'lucide-react'
 import useWaitlist from '../useWaitlist'
 
 const Hero = () => {
     const { status, submit } = useWaitlist()
     const [activePhone, setActivePhone] = useState(0)
+    const touchStartX = useRef(null)
+    const touchEndX = useRef(null)
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.targetTouches[0].clientX
+    }
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.targetTouches[0].clientX
+    }
+
+    const handleTouchEnd = () => {
+        if (!touchStartX.current || !touchEndX.current) return
+        const distance = touchStartX.current - touchEndX.current
+        const isLeftSwipe = distance > 50
+        const isRightSwipe = distance < -50
+
+        if (isLeftSwipe) {
+            setActivePhone(1)
+        } else if (isRightSwipe) {
+            setActivePhone(0)
+        }
+
+        touchStartX.current = null
+        touchEndX.current = null
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -82,7 +108,12 @@ const Hero = () => {
                 </div>
 
                 {/* Phone mockups - visible on mobile as a single straight phone, two overlapping on desktop */}
-                <div className="flex flex-1 relative min-h-[500px] lg:min-h-[560px] xl:min-h-[640px] justify-center items-center w-full mt-10 lg:mt-0 scale-[0.85] origin-top lg:scale-100">
+                <div
+                    className="flex flex-1 relative min-h-[500px] lg:min-h-[560px] xl:min-h-[640px] justify-center items-center w-full mt-10 lg:mt-0 scale-[0.85] origin-top lg:scale-100"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
                     {/* First Phone: Activity Feed */}
                     <div className={`w-[280px] h-[580px] bg-white rounded-[40px] shadow-[0_28px_56px_-20px_rgba(0,0,0,0.35)] border-[8px] border-gray-800 absolute overflow-hidden z-[1] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] origin-bottom lg:origin-center 
                         ${activePhone === 0 ? 'opacity-100 scale-[1]' : 'opacity-0 scale-[0.8] pointer-events-none'} 
