@@ -26,10 +26,6 @@ const Navigation = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                    <a href="#hero" className="inline-block bg-black text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-[0.95rem] hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                        Get Early Access
-                    </a>
-
                     {/* Hamburger button */}
                     <button
                         className="md:hidden p-2 text-text-primary"
